@@ -172,13 +172,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-Cannot-find-module-‘-babel-plugin-transform-react-jsx’"><a href="#1-Cannot-find-module-‘-babel-plugin-transform-react-jsx’" class="headerlink" title="1. Cannot find module ‘@babel/plugin-transform-react-jsx’"></a>1. Cannot find module ‘@babel/plugin-transform-react-jsx’</h2><p>after you executed ‘npm run eject’</p>
-<p>1.cd your project path (ignore)</p>
-<p>2.rm -rf node_modules</p>
-<p>3.npm install (don’t use yarn )</p>
-<p>npm run start success</p>
-<h2 id="2-import-‘antd-dist-antd-css’-or-‘antd-dist-antd-less’"><a href="#2-import-‘antd-dist-antd-css’-or-‘antd-dist-antd-less’" class="headerlink" title="2.import ‘antd/dist/antd.css’;  // or ‘antd/dist/antd.less’"></a>2.import ‘antd/dist/antd.css’;  // or ‘antd/dist/antd.less’</h2><h2 id="3-less"><a href="#3-less" class="headerlink" title="3. less"></a>3. less</h2><p>安装 less 和 less-loader ，并修改 webpack 配置<br>$ cnpm i less less-loader –save-dev<br>复制代码修改 webpack 配置<br>修改 webpack.config.dev.js 和 webpack.config-prod.js 配置文件, 增加less文件配置:<br>{<br>    test: /.less$/,<br>    use: [<br>      require.resolve(‘style-loader’),<br>      {<br>        loader: require.resolve(‘css-loader’),<br>        options: {<br>          importLoaders: 1,<br>        },<br>      },<br>      {<br>        loader: require.resolve(‘less-loader’) // compiles Less to CSS<br>      }<br>    ],<br>  },</p>
-<h2 id="4-promise-jsonp-weatherAPI"><a href="#4-promise-jsonp-weatherAPI" class="headerlink" title="4. promise jsonp weatherAPI"></a>4. promise jsonp weatherAPI</h2><h2 id="5-header-arrow"><a href="#5-header-arrow" class="headerlink" title="5. header arrow"></a>5. header arrow</h2>
+        <h2 id="1-Cannot-find-module-‘-babel-plugin-transform-react-jsx’"><a href="#1-Cannot-find-module-‘-babel-plugin-transform-react-jsx’" class="headerlink" title="1. Cannot find module ‘@babel/plugin-transform-react-jsx’"></a>1. Cannot find module ‘@babel/plugin-transform-react-jsx’</h2><p>after you executed ‘npm run eject’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.cd your project path (ignore)</span><br><span class="line"></span><br><span class="line">2.rm -rf node_modules</span><br><span class="line"></span><br><span class="line">3.npm install (don&apos;t use yarn )</span><br><span class="line"></span><br><span class="line">npm run start success</span><br></pre></td></tr></table></figure></p>
+        
       
 
       
@@ -242,7 +237,6 @@
       
         <h1 id="ERRORS"><a href="#ERRORS" class="headerlink" title="ERRORS"></a>ERRORS</h1><hr>
 <h2 id="1-推送上线排版出错"><a href="#1-推送上线排版出错" class="headerlink" title="1. 推送上线排版出错"></a>1. 推送上线排版出错</h2><p>heroku 测试用 可以用 watch，线上要用 <code>npm run production</code></p>
-<p>## </p>
 
       
 
@@ -492,27 +486,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="php基础"><a href="#php基础" class="headerlink" title="php基础"></a>php基础</h2><ol>
-<li><p>session和cookie的区别<br>Session是在服务端保存的一个数据结构，用来跟踪用户的状态，这个数据可以保存在集群、数据库、文件中<br>Cookie是客户端保存用户信息的一种机制，用来记录用户的一些信息，也是实现Session的一种方式。<br>Session is a data structure saved on the server to track the user’s status. This data can be saved in the cluster, database, and file.<br>A cookie is a mechanism for a client to store user information. It is used to record some information about the user and is a way to implement the session. </p>
-</li>
-<li><p>Difference between mysql_fetch_array and mysql_fetch_row?</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_fetch_array ( resource $result [, int $result_type = MYSQL_BOTH ] )</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>Returns an array of strings that corresponds to the fetched row, or FALSE if there are no more rows. The type of returned array depends on how result_type is defined. By using MYSQL_BOTH (default), you’ll get an array with both associative and number indices. Using MYSQL_ASSOC, you only get associative indices (as mysql_fetch_assoc() works), [by] using MYSQL_NUM, you only get number indices (as mysql_fetch_row() works).</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_fetch_row ( resource $result )</span><br></pre></td></tr></table></figure>
-<p>Returns an numerical array of strings that corresponds to the fetched row, or FALSE if there are no more rows.</p>
-<p>mysql_fetch_row() fetches one row of data from the result associated with the specified result identifier. The row is returned as an array. Each result column is stored in an array offset, starting at offset 0.</p>
-<ul>
-<li>In summary</li>
-</ul>
-<p>mysql_fetch_array( $result, MYSQL_ASSOC ) = mysql_fetch_assoc( $result ) mysql_fetch_array( $result, MYSQL_NUM ) = mysql_fetch_row( $result )</p>
-<p>And</p>
-<p>mysql_fetch_array ( $result ) = mysql_fetch_assoc( $result ) + mysql_fetch_row( $result )</p>
-<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2>
+<li><p>session和cookie的区别<br>Session是在服务端保存的一个数据结构，用来跟踪用户的状态，这个数据可以保存在集群、数据库、文件中<br>Cookie是客户端保存用户信息的一种机制，用来记录用户的一些信息，也是实现Session的一种方式。<br>Session is a data structure saved on the server to track the user’s status. This data can be saved in the cluster, database, and file. </p>
+        
       
 
       
-    </div>
+    </li></ol></div>
     <div class="article-info article-info-index">
       
       
