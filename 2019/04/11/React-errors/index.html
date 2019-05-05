@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://zw896.github.io">
-  <title>Archives | WEB BIGBANG</title>
+  <title>[React] bike-management system errors | WEB BIGBANG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="learning notes by Billy Wang">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WEB BIGBANG">
-<meta property="og:url" content="http://zw896.github.io/archives/index.html">
+  <meta name="description" content="1. Cannot find module ‘@babel/plugin-transform-react-jsx’after you executed ‘npm run eject’ 1.cd your project path (ignore) 2.rm -rf node_modules 3.npm install (don’t use yarn ) npm run start success">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[React] bike-management system errors">
+<meta property="og:url" content="http://zw896.github.io/2019/04/11/React-errors/index.html">
 <meta property="og:site_name" content="WEB BIGBANG">
-<meta property="og:description" content="learning notes by Billy Wang">
+<meta property="og:description" content="1. Cannot find module ‘@babel/plugin-transform-react-jsx’after you executed ‘npm run eject’ 1.cd your project path (ignore) 2.rm -rf node_modules 3.npm install (don’t use yarn ) npm run start success">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-13T12:44:43.183Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WEB BIGBANG">
-<meta name="twitter:description" content="learning notes by Billy Wang">
+<meta name="twitter:title" content="[React] bike-management system errors">
+<meta name="twitter:description" content="1. Cannot find module ‘@babel/plugin-transform-react-jsx’after you executed ‘npm run eject’ 1.cd your project path (ignore) 2.rm -rf node_modules 3.npm install (don’t use yarn ) npm run start success">
   
     <link rel="alternative" href="/atom.xml" title="WEB BIGBANG" type="application/atom+xml">
   
@@ -150,240 +151,174 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-React-errors" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      [React] bike-management system errors
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/11/React-errors/" class="archive-article-date">
+
+        
+        <a href="/2019/04/11/React-errors/" class="archive-article-date">
   	<time datetime="2019-04-11T00:53:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/11/React-errors/">[React] bike-management system errors</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-Cannot-find-module-‘-babel-plugin-transform-react-jsx’"><a href="#1-Cannot-find-module-‘-babel-plugin-transform-react-jsx’" class="headerlink" title="1. Cannot find module ‘@babel/plugin-transform-react-jsx’"></a>1. Cannot find module ‘@babel/plugin-transform-react-jsx’</h2><p>after you executed ‘npm run eject’</p>
+<p>1.cd your project path (ignore)</p>
+<p>2.rm -rf node_modules</p>
+<p>3.npm install (don’t use yarn )</p>
+<p>npm run start success</p>
+<h2 id="2-import-‘antd-dist-antd-css’-or-‘antd-dist-antd-less’"><a href="#2-import-‘antd-dist-antd-css’-or-‘antd-dist-antd-less’" class="headerlink" title="2.import ‘antd/dist/antd.css’;  // or ‘antd/dist/antd.less’"></a>2.import ‘antd/dist/antd.css’;  // or ‘antd/dist/antd.less’</h2><h2 id="3-less"><a href="#3-less" class="headerlink" title="3. less"></a>3. less</h2><p>安装 less 和 less-loader ，并修改 webpack 配置<br>$ cnpm i less less-loader –save-dev<br>复制代码修改 webpack 配置<br>修改 webpack.config.dev.js 和 webpack.config-prod.js 配置文件, 增加less文件配置:<br>{<br>    test: /.less$/,<br>    use: [<br>      require.resolve(‘style-loader’),<br>      {<br>        loader: require.resolve(‘css-loader’),<br>        options: {<br>          importLoaders: 1,<br>        },<br>      },<br>      {<br>        loader: require.resolve(‘less-loader’) // compiles Less to CSS<br>      }<br>    ],<br>  },</p>
+<h2 id="4-promise-jsonp-weatherAPI"><a href="#4-promise-jsonp-weatherAPI" class="headerlink" title="4. promise jsonp weatherAPI"></a>4. promise jsonp weatherAPI</h2><h2 id="5-header-arrow"><a href="#5-header-arrow" class="headerlink" title="5. header arrow"></a>5. header arrow</h2>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zw896.github.io/2019/04/11/React-errors/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/05/PHP-Laravel-L02-Laravel-教程-Web-开发实战进阶-Laravel-5-7/" class="archive-article-date">
-  	<time datetime="2019-04-05T09:52:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/05/PHP-Laravel-L02-Laravel-教程-Web-开发实战进阶-Laravel-5-7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[PHP/Laravel] L02 Laravel 教程 - Web 开发实战进阶 ( Laravel 5.7 )</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/05/PHP-Laravel-L02-Laravel-教程-Web-开发实战进阶-Laravel-5-7/">[PHP/Laravel] L02 Laravel 教程 - Web 开发实战进阶 ( Laravel 5.7 )</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Laravel</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Cannot-find-module-‘-babel-plugin-transform-react-jsx’"><span class="toc-number">1.</span> <span class="toc-text">1. Cannot find module ‘@babel/plugin-transform-react-jsx’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-import-‘antd-dist-antd-css’-or-‘antd-dist-antd-less’"><span class="toc-number">2.</span> <span class="toc-text">2.import ‘antd/dist/antd.css’;  // or ‘antd/dist/antd.less’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-less"><span class="toc-number">3.</span> <span class="toc-text">3. less</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-promise-jsonp-weatherAPI"><span class="toc-number">4.</span> <span class="toc-text">4. promise jsonp weatherAPI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-header-arrow"><span class="toc-number">5.</span> <span class="toc-text">5. header arrow</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/10/PHP-关于php高并发解决的一点思路/" class="archive-article-date">
-  	<time datetime="2019-03-10T09:07:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/10/PHP-关于php高并发解决的一点思路/">[PHP] 关于php高并发解决的一点思路</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/PHP//" class="article-tag-list-link color4">PHP</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/10/Web-security-什么是CSRF、XSS、sql注入、DDOS流量攻击/" class="archive-article-date">
-  	<time datetime="2019-03-10T05:15:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/10/Web-security-什么是CSRF、XSS、sql注入、DDOS流量攻击/">Web security: 什么是CSRF、XSS、sql注入、DDOS流量攻击</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Security</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/09/PHP-Laravel-interview/" class="archive-article-date">
-  	<time datetime="2019-03-09T10:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/09/PHP-Laravel-interview/">PHP, Laravel interview</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Laravel</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">job</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -406,8 +341,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
