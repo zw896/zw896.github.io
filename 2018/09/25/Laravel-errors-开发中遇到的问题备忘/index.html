@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://zw896.github.io">
-  <title>Archives: 2019 | WEB BIGBANG</title>
+  <title>Laravel errors (开发中遇到的问题备忘) | WEB BIGBANG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="learning notes by Billy Wang">
-<meta property="og:type" content="website">
-<meta property="og:title" content="WEB BIGBANG">
-<meta property="og:url" content="http://zw896.github.io/archives/2019/index.html">
+  <meta name="description" content="这次从Laravel5.6开始，把从头开始可能所有遇到的问题记录在这里 Whoops, looks like something went wrong.没有打开DEBUG，检查.env文件是否存在，没有的话，复制.env.example。配置APP_DEBUG=true">
+<meta name="keywords" content="Laravel,error">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel errors (开发中遇到的问题备忘)">
+<meta property="og:url" content="http://zw896.github.io/2018/09/25/Laravel-errors-开发中遇到的问题备忘/index.html">
 <meta property="og:site_name" content="WEB BIGBANG">
-<meta property="og:description" content="learning notes by Billy Wang">
+<meta property="og:description" content="这次从Laravel5.6开始，把从头开始可能所有遇到的问题记录在这里 Whoops, looks like something went wrong.没有打开DEBUG，检查.env文件是否存在，没有的话，复制.env.example。配置APP_DEBUG=true">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-24T16:01:26.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WEB BIGBANG">
-<meta name="twitter:description" content="learning notes by Billy Wang">
+<meta name="twitter:title" content="Laravel errors (开发中遇到的问题备忘)">
+<meta name="twitter:description" content="这次从Laravel5.6开始，把从头开始可能所有遇到的问题记录在这里 Whoops, looks like something went wrong.没有打开DEBUG，检查.env文件是否存在，没有的话，复制.env.example。配置APP_DEBUG=true">
   
     <link rel="alternative" href="/atom.xml" title="WEB BIGBANG" type="application/atom+xml">
   
@@ -150,278 +152,222 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Laravel-errors-开发中遇到的问题备忘" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/11/React-errors/" class="archive-article-date">
-  	<time datetime="2019-04-11T00:53:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/11/React-errors/">[React] bike-management system errors</a>
+    <h1 class="article-title" itemprop="name">
+      Laravel errors (开发中遇到的问题备忘)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/05/PHP-Laravel-L02-Laravel-教程-Web-开发实战进阶-Laravel-5-7/" class="archive-article-date">
-  	<time datetime="2019-04-05T09:52:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-05</time>
+        
+        <a href="/2018/09/25/Laravel-errors-开发中遇到的问题备忘/" class="archive-article-date">
+  	<time datetime="2018-09-25T04:47:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/05/PHP-Laravel-L02-Laravel-教程-Web-开发实战进阶-Laravel-5-7/">[PHP/Laravel] L02 Laravel 教程 - Web 开发实战进阶 ( Laravel 5.7 )</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这次从Laravel5.6开始，把从头开始可能所有遇到的问题记录在这里</p>
+<h2 id="Whoops-looks-like-something-went-wrong"><a href="#Whoops-looks-like-something-went-wrong" class="headerlink" title="Whoops, looks like something went wrong."></a>Whoops, looks like something went wrong.</h2><p>没有打开DEBUG，检查.env文件是否存在，没有的话，复制.env.example。配置APP_DEBUG=true</p>
+<a id="more"></a>
+<h2 id="RuntimeException-No-application-encryption-key-has-been-specified"><a href="#RuntimeException-No-application-encryption-key-has-been-specified" class="headerlink" title="RuntimeException No application encryption key has been specified."></a>RuntimeException No application encryption key has been specified.</h2><p>和上面原因类似，如果手动复制.env的话，需要执行php artisan key:generate来生成key</p>
+<h2 id="InvalidArgumentException-Route-login-not-defined"><a href="#InvalidArgumentException-Route-login-not-defined" class="headerlink" title="InvalidArgumentException Route [login] not defined."></a>InvalidArgumentException Route [login] not defined.</h2><p>需要给一个命名路由login<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Route::get(<span class="string">'/login'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">&#125;)-&gt;name(<span class="string">'login'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>来看一下调用链，代码顺序就是执行顺序。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Convert an authentication exception into a response.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">unauthenticated</span><span class="params">($request, AuthenticationException $exception)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 如果请求头指明要JSON格式，会返回401，API调用时不会跳转。</span></span><br><span class="line">    <span class="keyword">return</span> $request-&gt;expectsJson()</span><br><span class="line">                ? response()-&gt;json([<span class="string">'message'</span> =&gt; $exception-&gt;getMessage()], <span class="number">401</span>)</span><br><span class="line">                : redirect()-&gt;guest(route(<span class="string">'login'</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// vendor\laravel\framework\src\Illuminate\Foundation\helpers.php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Generate the URL to a named route.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">route</span><span class="params">($name, $parameters = [], $absolute = true)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> app(<span class="string">'url'</span>)-&gt;route($name, $parameters, $absolute);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// vendor\laravel\framework\src\Illuminate\Routing\UrlGenerator.php</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Get the URL to a named route.</span></span><br><span class="line"><span class="comment"> * /</span></span><br><span class="line"><span class="comment">public function route($name, $parameters = [], $absolute = true)</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    if (! is_null($route = $this-&gt;routes-&gt;getByName($name))) &#123;</span></span><br><span class="line"><span class="comment">        return $this-&gt;toRoute($route, $parameters, $absolute);</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment">    throw new InvalidArgumentException("Route [&#123;$name&#125;] not defined.");</span></span><br><span class="line"><span class="comment">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Illuminate-Database-QueryException-SQLSTATE-42000-Syntax-error-or-access-violation-1071-Specified-key-was-too-long-max-key-length-is-767-bytes-SQL-alter-table-users-add-unique-users-email-unique-email"><a href="#Illuminate-Database-QueryException-SQLSTATE-42000-Syntax-error-or-access-violation-1071-Specified-key-was-too-long-max-key-length-is-767-bytes-SQL-alter-table-users-add-unique-users-email-unique-email" class="headerlink" title="Illuminate\Database\QueryException : SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table users add unique users_email_unique(email))"></a>Illuminate\Database\QueryException : SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table <code>users</code> add unique <code>users_email_unique</code>(<code>email</code>))</h2><p>索引字段太长，因为Laravel5.4开始使用utf8mb4作为默认字符集，解决方法有两种：</p>
+<p>使用MySQL5.7.7及以上版本，或者MariaDB10.2.2及以上版本<br>把字段设置短，但是email的存储长度也会变短。在AppServiceProvider中设置<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Support</span>\<span class="title">Facades</span>\<span class="title">Schema</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Bootstrap any application services.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> void</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">boot</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Schema::defaultStringLength(<span class="number">191</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>参考：</p>
+<p><a href="https://laravel.com/docs/master/migrations#creating-indexes" target="_blank" rel="noopener">https://laravel.com/docs/master/migrations#creating-indexes</a></p>
+<h2 id="Illuminate-Http-Request中的user-是如何赋值的"><a href="#Illuminate-Http-Request中的user-是如何赋值的" class="headerlink" title="\Illuminate\Http\Request中的user()是如何赋值的"></a>\Illuminate\Http\Request中的user()是如何赋值的</h2><p>来看一下调用链，代码顺序就是执行顺序。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vendor/laravel/framework/src/Illuminate/Http/Request.php</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the user making the request.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">user</span><span class="params">($guard = null)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> call_user_func(<span class="keyword">$this</span>-&gt;getUserResolver(), $guard);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// vendor/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Register a resolver for the authenticated user.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">registerRequestRebindHandler</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;app-&gt;rebinding(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span> <span class="params">($app, $request)</span> </span>&#123;</span><br><span class="line">            $request-&gt;setUserResolver(<span class="function"><span class="keyword">function</span> <span class="params">($guard = null)</span> <span class="title">use</span> <span class="params">($app)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> call_user_func($app[<span class="string">'auth'</span>]-&gt;userResolver(), $guard);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">上面使用了$app[<span class="string">'auth'</span>]，Illuminate\Auth\AuthManager</span><br><span class="line"></span><br><span class="line"><span class="comment">// vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Create a new Auth manager instance.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($app)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">$this</span>-&gt;app = $app;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">$this</span>-&gt;userResolver = <span class="function"><span class="keyword">function</span> <span class="params">($guard = null)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;guard($guard)-&gt;user();</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Attempt to get the guard from the local cache.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">guard</span><span class="params">($name = null)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $name = $name ?: <span class="keyword">$this</span>-&gt;getDefaultDriver();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;guards[$name] ?? <span class="keyword">$this</span>-&gt;guards[$name] = <span class="keyword">$this</span>-&gt;resolve($name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the default authentication driver name.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getDefaultDriver</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;app[<span class="string">'config'</span>][<span class="string">'auth.defaults.guard'</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Resolve the given guard.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">function</span> <span class="title">resolve</span><span class="params">($name)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $config = <span class="keyword">$this</span>-&gt;getConfig($name);</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">        $driverMethod = <span class="string">'create'</span>.ucfirst($config[<span class="string">'driver'</span>]).<span class="string">'Driver'</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (method_exists(<span class="keyword">$this</span>, $driverMethod)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;&#123;$driverMethod&#125;($name, $config);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> InvalidArgumentException(<span class="string">"Auth driver [&#123;$config['driver']&#125;] for guard [&#123;$name&#125;] is not defined."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Create a session based authentication guard.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">createSessionDriver</span><span class="params">($name, $config)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $provider = <span class="keyword">$this</span>-&gt;createUserProvider($config[<span class="string">'provider'</span>] ?? <span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        $guard = <span class="keyword">new</span> SessionGuard($name, $provider, <span class="keyword">$this</span>-&gt;app[<span class="string">'session.store'</span>]);        </span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">return</span> $guard;</span><br><span class="line">    &#125;</span><br><span class="line">上面调用的是createSessionDriver，也可能是createTokenDriver，根据config/auth.php配置</span><br><span class="line"></span><br><span class="line">    <span class="string">'guards'</span> =&gt; [</span><br><span class="line">        <span class="string">'web'</span> =&gt; [</span><br><span class="line">            <span class="string">'driver'</span> =&gt; <span class="string">'session'</span>,</span><br><span class="line">            <span class="string">'provider'</span> =&gt; <span class="string">'users'</span>,</span><br><span class="line">        ],</span><br><span class="line"></span><br><span class="line">        <span class="string">'api'</span> =&gt; [</span><br><span class="line">            <span class="string">'driver'</span> =&gt; <span class="string">'token'</span>,</span><br><span class="line">            <span class="string">'provider'</span> =&gt; <span class="string">'users'</span>,</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br><span class="line"><span class="comment">// vendor/laravel/framework/src/Illuminate/Auth/CreatesUserProviders.php</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Create the user provider implementation for the driver.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">createUserProvider</span><span class="params">($provider = null)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="keyword">switch</span> ($driver) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'database'</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;createDatabaseProvider($config);</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'eloquent'</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;createEloquentProvider($config);</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> InvalidArgumentException(</span><br><span class="line">                    <span class="string">"Authentication user provider [&#123;$driver&#125;] is not defined."</span></span><br><span class="line">                );</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>因为config/auth.php里配置的eloquent，所以创建了Illuminate\Auth\EloquentUserProvider<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'providers'</span> =&gt; [</span><br><span class="line">    <span class="string">'users'</span> =&gt; [</span><br><span class="line">        <span class="string">'driver'</span> =&gt; <span class="string">'eloquent'</span>,</span><br><span class="line">        <span class="string">'model'</span> =&gt; App\User::class,</span><br><span class="line">    ],</span><br></pre></td></tr></table></figure></p>
+<p>之后会根据配置调用到SessionGuard或者TokenGuard中的user()方法。</p>
+<p>怎么有时候要配置Service Provider，有时候又不需要<br>从Laravel5.5开始，有Package Discover，可以在composer.json的extra中配置好。</p>
+<h2 id="php-artisan-vendor-publish-干了什么"><a href="#php-artisan-vendor-publish-干了什么" class="headerlink" title="php artisan vendor:publish 干了什么"></a>php artisan vendor:publish 干了什么</h2><p>vendor:publish 执行文件在 vendor/laravel/framework/src/Illuminate/Foundation/Console/VendorPublishCommand.php<br>作用是把包中可发布的内容发布出来，比如把配置文件发布到config/目录下，用户就可以修改包的配置了。</p>
+<p>Unable to prepare route [api/user] for serialization. Uses Closure.<br>运行 php artisan route:cache 缓存路由有要求，闭包(匿名函数)是不能缓存的。所以应该写成 Controller@action 的形式。<br>group如果用闭包方式写的，只要group中的内容不使用闭包，依然是可以缓存的。比如这样的：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Route::group([<span class="string">'middleware'</span> =&gt; [<span class="string">'guest'</span>], <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Route::get(<span class="string">'/hi'</span>, <span class="string">'WelcomeController@hi'</span>);</span><br><span class="line">    Route::get(<span class="string">'/bye'</span>, <span class="string">'WelcomeController@bye'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>参考：</p>
+<p>Will grouped Laravel routes be cached? Where are they cached?<br>还可以group包含一个文件(从框架中看到的) app/Providers/RouteServiceProvider.php:mapWebRoutes<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Route::middleware(<span class="string">'web'</span>)</span><br><span class="line">     -&gt;namespace(<span class="keyword">$this</span>-&gt;namespace)</span><br><span class="line">     -&gt;group(base_path(<span class="string">'routes/base.php'</span>));</span><br></pre></td></tr></table></figure></p>
+<h2 id="Malformed-UTF-8-characters-possibly-incorrectly-encoded"><a href="#Malformed-UTF-8-characters-possibly-incorrectly-encoded" class="headerlink" title="Malformed UTF-8 characters, possibly incorrectly encoded"></a>Malformed UTF-8 characters, possibly incorrectly encoded</h2><p>可能是UTF8编码问题，也可能是数据库连不上。 参考：<br>‘Malformed UTF-8 characters, possibly incorrectly encoded’ in Laravel</p>
+<h2 id="Illuminate-Database-Eloquent-MassAssignmentException"><a href="#Illuminate-Database-Eloquent-MassAssignmentException" class="headerlink" title="Illuminate \ Database \ Eloquent \ MassAssignmentException"></a>Illuminate \ Database \ Eloquent \ MassAssignmentException</h2><p>批量赋值的安全监测没过，批量赋值需要显式设置可赋值的字段。通过设置模型的 protected $fillable 属性来解决。</p>
+<h2 id="sometimes验证规则怎么应用在Request的rules中"><a href="#sometimes验证规则怎么应用在Request的rules中" class="headerlink" title="sometimes验证规则怎么应用在Request的rules中"></a>sometimes验证规则怎么应用在Request的rules中</h2><p>可以用withValidator来追加规则，但是这样会造成规则在2处维护；直接在rules根据条件添加规则也是一种方法；</p>
+<p>Symfony\Component\HttpKernel\Exception\HttpException<br>json返回异常 Symfony\Component\HttpKernel\Exception\HttpException，message为空。去掉Accept: application/json页面提示The page has expired due to inactivity.<br>原因是post请求没有关闭csrf，在VerifyCsrfToken.php添加排除项就行了。</p>
+<p>Text类型改MediumText，migration中用change没效果<br>原因是dbal的bug，<a href="https://github.com/doctrine/dbal/issues/2566" target="_blank" rel="noopener">https://github.com/doctrine/dbal/issues/2566</a> ，暂时改用DB::statement直接执行SQL</p>
+<p>使用laravel输出流<br>为了现生成一个大文件直接下载，手册上没找到方法，从代码中找到有response()-&gt;stream()方法。<br>第一个参数是\Closure，把输出逻辑写在里面就行了。数据可以通过use传进去。<br>第三个参数是headers，可以自定义响应头</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Laravel</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/CSS-footer-layout/" class="archive-article-date">
-  	<time datetime="2019-03-16T12:45:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/CSS-footer-layout/">[CSS] footer layout</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/10/PHP-关于php高并发解决的一点思路/" class="archive-article-date">
-  	<time datetime="2019-03-10T09:07:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/10/PHP-关于php高并发解决的一点思路/">[PHP] 关于php高并发解决的一点思路</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">error</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/PHP//" class="article-tag-list-link color4">PHP</a>
+        			<a href="/categories/laravel//" class="article-tag-list-link color3">laravel</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://zw896.github.io/2018/09/25/Laravel-errors-开发中遇到的问题备忘/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/10/Web-security-什么是CSRF、XSS、sql注入、DDOS流量攻击/" class="archive-article-date">
-  	<time datetime="2019-03-10T05:15:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/03/09/PHP-Laravel-interview/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          PHP, Laravel interview
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/10/Web-security-什么是CSRF、XSS、sql注入、DDOS流量攻击/">Web security: 什么是CSRF、XSS、sql注入、DDOS流量攻击</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Security</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Whoops-looks-like-something-went-wrong"><span class="toc-number">1.</span> <span class="toc-text">Whoops, looks like something went wrong.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RuntimeException-No-application-encryption-key-has-been-specified"><span class="toc-number">2.</span> <span class="toc-text">RuntimeException No application encryption key has been specified.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#InvalidArgumentException-Route-login-not-defined"><span class="toc-number">3.</span> <span class="toc-text">InvalidArgumentException Route [login] not defined.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Illuminate-Database-QueryException-SQLSTATE-42000-Syntax-error-or-access-violation-1071-Specified-key-was-too-long-max-key-length-is-767-bytes-SQL-alter-table-users-add-unique-users-email-unique-email"><span class="toc-number">4.</span> <span class="toc-text">Illuminate\Database\QueryException : SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table users add unique users_email_unique(email))</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Illuminate-Http-Request中的user-是如何赋值的"><span class="toc-number">5.</span> <span class="toc-text">\Illuminate\Http\Request中的user()是如何赋值的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php-artisan-vendor-publish-干了什么"><span class="toc-number">6.</span> <span class="toc-text">php artisan vendor:publish 干了什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Malformed-UTF-8-characters-possibly-incorrectly-encoded"><span class="toc-number">7.</span> <span class="toc-text">Malformed UTF-8 characters, possibly incorrectly encoded</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Illuminate-Database-Eloquent-MassAssignmentException"><span class="toc-number">8.</span> <span class="toc-text">Illuminate \ Database \ Eloquent \ MassAssignmentException</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sometimes验证规则怎么应用在Request的rules中"><span class="toc-number">9.</span> <span class="toc-text">sometimes验证规则怎么应用在Request的rules中</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/09/PHP-Laravel-interview/" class="archive-article-date">
-  	<time datetime="2019-03-09T10:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/09/PHP-Laravel-interview/">PHP, Laravel interview</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Laravel</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">interview</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">job</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -444,8 +390,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
